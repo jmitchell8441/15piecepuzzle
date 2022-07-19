@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fifteen Puzzle</title>
+    <link rel="stylesheet" href="fifteen.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="more-info">
+      <button id="popup" class="popupButton" onclick="popUp()">
+        <i class="fa fa-info"></i>
+        <span class="popuptext" id="popupContent">
+          The goal of the fifteen puzzle is to un-jumble its fifteen squares by
+          repeatedly making moves and slide squares into the empty space. How
+          quickly can you solve it?
+        </span>
+      </button>
+    </div>
+
+    <p id="title">Fifteen Puzzle</p>
+
+    <div id="gameBoard"></div>
+
+    <div id="settings">
+      <button id="button">Shuffle</button>
+
+      <select name="imageSelect" id="imageSelect" onchange="changeBackground()">
+        <option value="background.jpg">Howl's Moving Castle</option>
+        <option value="sharkOtter.jpg">Shark Otter</option>
+        <option value="arrietty.jpg">arrietty</option>
+      </select>
+    </div>
+
+    <script src="fifteen.js"></script>
+  </body>
+</html>

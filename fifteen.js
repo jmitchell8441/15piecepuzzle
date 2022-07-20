@@ -22,7 +22,7 @@ function makeTiles(){
     for(var i = 1; i < rows * cols; i++){
         //create the individual divs that will contain image and num in middle
         var individual = document.createElement("div");
-        //each of the divs will have class piece
+        //each of the divs will have class tiles
         individual.classList.add("tiles");
         individual.innerHTML = i;
         //background position 

@@ -5,6 +5,14 @@ body{
 	color: #5a575f;
 }
 
+select{
+	height: 48px;
+	border-radius: 30px;
+	color: #baa1be;
+	border-color: #5a575f;
+	width: 180px;
+}
+
 #gameBoard {
 	font-size: 32pt;
 	height: 400px;

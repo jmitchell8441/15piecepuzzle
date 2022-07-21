@@ -156,7 +156,7 @@ function setBackground(){
 function shuffle(){
 
     let nextTo;
-    let moves = 2; //how many moves to shuffle (difficulty);
+    let moves = 1000; //how many moves to shuffle (difficulty);
 
     for(let i=0; i < moves; i++){
         nextTo = isNextTo(empty());

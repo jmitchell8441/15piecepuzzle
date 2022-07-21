@@ -44,6 +44,12 @@ h2:hover {
 	
 } 
 
+#hint{
+	position: absolute;
+	top: 100px;
+	left: 80px;
+}
+
 .tiles {
 	height: 97px;
 	width: 97px;

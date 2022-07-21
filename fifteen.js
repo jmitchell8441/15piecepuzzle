@@ -49,6 +49,29 @@ game.addEventListener('mouseout', function(e){
     }
 });
 
+
+//create cheat sheet
+document.getElementById('cheat').addEventListener('mouseout', function(e){
+    const img = document.getElementById('hint');
+    img.src = '';
+});
+document.getElementById('cheat').addEventListener('mouseover', function(e){
+    var imageSelect = document.getElementById("imageSelect");
+    var selectedImage = imageSelect.options[imageSelect.selectedIndex].value;
+
+    const img = document.getElementById('hint');
+
+    img.src = './images/'+ selectedImage;
+
+    console.log(img);
+
+});
+
+    function getImg(selectedImage){
+        console.log(selectedImage);
+        //document.getElementById('hint').src = './images/'+selectedImage;
+    }
+
 function makeTiles(){
     // 4x4
     var rows = 4;
@@ -105,7 +128,7 @@ function changeBackground(){
     // background-image: url('background.jpg');
     element[i].style.backgroundImage = "url('images/" + selectedImage + "')";
     }
-
+    document.getElementById('hint').src = './images/background.jpg';
     document.querySelector('.empty').style.backgroundImage = '';
 }
 

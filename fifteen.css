@@ -11,6 +11,7 @@ select{
 	color: #baa1be;
 	border-color: #5a575f;
 	width: 180px;
+	text-align: center;
 }
 
 #gameBoard {
@@ -40,6 +41,11 @@ select{
 	border: 2px solid red;
 	color: red;
 	cursor: pointer;
+}
+.notValid{
+	border: 2px solid black;
+	color: none;
+	cursor: default;
 }
 .button{
     background-color: #baa1be;

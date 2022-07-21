@@ -30,17 +30,19 @@ document.getElementById('reload').addEventListener('click', function(e) {
 
 //show valid moves by hover
 game.addEventListener('mouseover', function(e) {
-    if(checkValidTile(isNextTo(e.target) !== -1) && !e.target.classList.contains('empty')){
+    //console.log('check tile'+checkValidTile(isNextTo(e.target)));
+    if(checkValidTile(isNextTo(e.target)) !== -1 && !e.target.classList.contains('empty')){
+        console.log('removeNotValid');
         e.target.classList.remove('notValid');
         e.target.classList.add('validMove');
+        console.log('addValidMove');
     }
 });
 game.addEventListener('mouseout', function(e){
-    console.log(e.target.classList.contains('validMove'))
-    if(e.target.classList.contains('validMove') && checkValidTile(isNextTo(e.target) == -1)){
+    //console.log(e.target.classList.contains('validMove'))
+    if(e.target.classList.contains('validMove') && checkValidTile(isNextTo(e.target)) == -1){
         e.target.classList.remove('validMove');
         e.target.classList.add('notValid');
-
     }
 });
 

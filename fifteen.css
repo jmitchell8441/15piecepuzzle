@@ -17,6 +17,7 @@ select{
 	font-size: 32pt;
 	height: 400px;
 	width: 400px;
+	background-color: #fff;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
@@ -29,15 +30,18 @@ select{
 }
 
 .tiles {
-	background-image: url('images/background.jpg');
 	height: 97px;
 	width: 97px;
 	border: 2px solid black;
 	position: absolute;
 	
 }
-
-#button{
+.validMove:hover{
+	border: 2px solid red;
+	color: red;
+	cursor: pointer;
+}
+.button{
     background-color: #baa1be;
     border: none;
     text-align: center;

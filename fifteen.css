@@ -25,10 +25,24 @@ select{
 	
 }
 
-#title{
-	font-size: 2em;
-	
+#gameBoard:hover{
+	box-shadow: rgba(86, 59, 182, 1) 0px 10px 80px;
 }
+
+h2:hover {
+	animation: cssAnimation_0 1341ms infinite ease-out 43ms;
+  }
+  
+  @keyframes cssAnimation_0 {
+	to {
+	  transform: rotate(360deg) translate(0px, 0px);
+	}
+  }
+
+ #title{
+	font-size: 45px;
+	
+} 
 
 .tiles {
 	height: 97px;

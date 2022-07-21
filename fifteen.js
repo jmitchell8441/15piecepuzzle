@@ -21,11 +21,14 @@ game.addEventListener('click', function(e) {
 //shuffle
 document.getElementById('shuffle').addEventListener('click', function(e) {
     shuffle();
+    document.getElementsByTagName('body')[0].style.backgroundColor = '';
+    document.getElementById('winner').innerHTML = '';
 });
 //reload page
 document.getElementById('reload').addEventListener('click', function(e) {
-    location.reload();
+    window.location.reload();
     document.getElementsByTagName('body')[0].style.backgroundColor = '';
+    return false;
 });
 
 //show valid moves by hover
@@ -120,7 +123,7 @@ function setBackground(){
 function shuffle(){
 
     let nextTo;
-    let moves = 5; //how many moves to shuffle (difficulty);
+    let moves = 2; //how many moves to shuffle (difficulty);
 
     for(let i=0; i < moves; i++){
         nextTo = isNextTo(empty());
@@ -280,9 +283,12 @@ function isSolved(){
         }
     }
     solved = true;
-    alert('You Solved It!');
+    //if(solved == true){
+        alert('You Solved It!');
 
-    document.getElementsByTagName('body')[0].style.backgroundColor = '#EF626C';
+        document.getElementsByTagName('body')[0].style.backgroundColor = '#EF626C';
+        document.getElementById('winner').innerHTML = '<h1>YOU WON!!</h1>';
+   // }
 
     return true;
 }

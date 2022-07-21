@@ -1,6 +1,8 @@
 window.onload = function(){
     makeTiles();
-    setBackground();
+    changeBackground();
+    document.getElementById('hint').src = '';
+
 }
 //when button is clicked, call shuffle
 // document.getElementById('button').onclick = shuffle;
@@ -60,12 +62,19 @@ document.getElementById('cheat').addEventListener('mouseover', function(e){
     var selectedImage = imageSelect.options[imageSelect.selectedIndex].value;
 
     const img = document.getElementById('hint');
-
     img.src = './images/'+ selectedImage;
 
     console.log(img);
-
 });
+
+document.getElementById('imageSelect').addEventListener('change', function(e) {
+    const img = document.getElementById('hint');
+    img.src = '';
+});
+document.getElementById('imageSelect').addEventListener('change', function(e) {
+    const img = document.getElementById('hint');
+    img.src = '';
+})
 
     function getImg(selectedImage){
         console.log(selectedImage);
@@ -129,6 +138,7 @@ function changeBackground(){
     element[i].style.backgroundImage = "url('images/" + selectedImage + "')";
     }
     document.getElementById('hint').src = './images/background.jpg';
+    document.querySelector('.empty').innerHTML = '';
     document.querySelector('.empty').style.backgroundImage = '';
 }
 

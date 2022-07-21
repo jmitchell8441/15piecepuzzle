@@ -308,9 +308,10 @@ function isSolved(){
     solved = true;
     //if(solved == true){
         alert('You Solved It!');
-
+        startConfetti();
         document.getElementsByTagName('body')[0].style.backgroundColor = '#EF626C';
         document.getElementById('winner').innerHTML = '<h1>YOU WON!!</h1>';
+        setTimeout(stopConfetti, 5000);
    // }
 
     return true;

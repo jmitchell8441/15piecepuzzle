@@ -13,16 +13,19 @@ function popUp() {
 }
 
 let solved = false;
+let shuffled = false;
 //onclick and on mouseover
 
 const game = document.getElementById('gameBoard');
 //move piece
-game.addEventListener('click', function(e) {
+    game.addEventListener('click', function(e) {
     moveTile(e.target);
+    shuffled = true;
 });
 //shuffle
 document.getElementById('shuffle').addEventListener('click', function(e) {
     shuffle();
+    shuffled = true;
     document.getElementsByTagName('body')[0].style.backgroundColor = '';
     document.getElementById('winner').innerHTML = '';
 });
@@ -316,13 +319,13 @@ function isSolved(){
         }
     }
     solved = true;
-    //if(solved == true){
+    if(shuffled == true){
         alert('You Solved It!');
         startConfetti();
         document.getElementsByTagName('body')[0].style.backgroundColor = '#EF626C';
         document.getElementById('winner').innerHTML = '<h1>YOU WON!!</h1>';
         setTimeout(stopConfetti, 5000);
-   // }
+    }
 
     return true;
 }
